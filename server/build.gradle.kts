@@ -22,6 +22,9 @@ repositories {
 }
 
 dependencies {
+    implementation("com.expediagroup:graphql-kotlin-spring-server:4.2.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")

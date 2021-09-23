@@ -1,0 +1,9 @@
+query ArtistIdQuery {
+    getArtists {
+       id
+        albums {
+            id
+            name
+        }
+    }
+}

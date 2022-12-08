@@ -19,14 +19,13 @@ fun main(args: Array<String>) {
 
 @RestController
 class MyDummyController(
-    private val graphQLWebClient: GraphQLWebClient,
+    private val graphQLWebClient: GraphQLWebClient
 ) {
     @GetMapping("/artists")
     suspend fun artists(): List<Artist> {
         val query = ArtistIdQuery()
         val result = graphQLWebClient.execute(query)
         return result.data?.getArtists ?: error("something went funky")
-
     }
 }
 
